@@ -81,7 +81,7 @@
       </li>
     </ul>
     <GoogleLogin client-id="647307757706-d4m043r2opgsst3jbr36toottl7mkuv4.apps.googleusercontent.com" v-bind:onsuccess="onSignIn" v-bind:onerror="onError"></GoogleLogin>
-    <GoogleLogout client-id="647307757706-d4m043r2opgsst3jbr36toottl7mkuv4.apps.googleusercontent.com">Logout</GoogleLogout>
+    <GoogleLogout client-id="647307757706-d4m043r2opgsst3jbr36toottl7mkuv4.apps.googleusercontent.com" v-bind:logout="logout">Logout</GoogleLogout>
   </div>
 </template>
 
@@ -108,6 +108,9 @@ export default {
     },
     onError (error) {
       console.log(error)
+    },
+    logout () {
+      this.msg = 'Good Bye from Your Vue.js App'
     }
   },
   components: {

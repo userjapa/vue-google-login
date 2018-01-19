@@ -1,3 +1,4 @@
 export default [
-  'clientId'
+  'clientId',
+  'logout'
 ]
